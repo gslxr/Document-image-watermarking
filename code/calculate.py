@@ -118,8 +118,8 @@ if __name__ == "__main__":
     all_change_intensity_rate = 0
     t1 = time.time()
     for image_idx in range(len(image_input_list)):
-        origin_image = Image.open(fp=image_input_list[image_idx])  # .convert("L")
-        encode_image = Image.open(fp=image_encoded_list[image_idx])  # .convert("L")
+        origin_image = Image.open(fp=image_input_list[image_idx])
+        encode_image = Image.open(fp=image_encoded_list[image_idx])
         change_intensity_ratio = get_change_ratio(origin_image, encode_image)
         all_change_intensity_rate += change_intensity_ratio
     t2 = time.time()
